@@ -61,34 +61,55 @@ int	ft_printf(const char *format, ...)
 	va_end (args);
 	return (count);
 }
-/*
+
 #include<stdio.h>
 int	main(void)
 {
-	char	s1[] = "World";
 	int		d;
+    int     *ptr = &d;
 
-	d = ft_printf("Character: %c, String: %s\n", 'A', "Hello");
+    ft_printf ("\n#####   FT_PRINTF   #####\n");
+    d = ft_printf ("\nCharacter: %c\n", 'A');
+    printf ("%d\n", d);
+	d = ft_printf("String: %s\n", "Hello!");
+	printf("%d\n", d);
+	d = ft_printf("Pointer: %p\n", ptr);
+	printf("%d\n", d);
+    d = ft_printf("Null pointer: %p\n", NULL);
+    printf("%d\n", d);
+    d = ft_printf("Integer: %i\n", 42);
+	printf("%d\n", d);
+    d = ft_printf("Decimal: %d\n", 42);
+	printf("%d\n", d);
+	d = ft_printf("Unsigned: %u\n", 1791239);
+	printf("%d\n", d);
+    d = ft_printf("Hex (lower): %x\n", 76383937);
+	printf("%d\n", d);
+    d = ft_printf("Hex (upper): %X\n", 76383937);
+	printf("%d\n", d);
+	d = ft_printf("Percent sign: %%\n");
 	printf("%d\n", d);
 
-	d = ft_printf("FT_PRINTF: Pointer: %p, Decimal: %d\n", NULL, 42);
+    ft_printf ("\n#####   PRINTF   #####\n");
+    d = printf ("\nCharacter: %c\n", 'A');
+    printf ("%d\n", d);
+	d = printf("String: %s\n", "Hello!");
 	printf("%d\n", d);
-
-	d = ft_printf("Unsigned: %u, Hex (lower): %x, Hex: %X\n", 255, 255, 255);
+	d = printf("Pointer: %p\n", ptr);
 	printf("%d\n", d);
-
-	d = ft_printf("FT_PRINTF: Percent sign: %%\n");
+    d = printf("Null pointer: %p\n", NULL);
+    printf("%d\n", d);
+    d = printf("Integer: %i\n", 42);
 	printf("%d\n", d);
-
-	d = printf("PRINTF: Character: %c, String: %s\n", 'A', "Hello");
+    d = printf("Decimal: %d\n", 42);
 	printf("%d\n", d);
-
-	d = printf("PRINTF: Pointer: %p, Decimal: %d\n", NULL, 42);
+	d = printf("Unsigned: %u\n", 1791239);
 	printf("%d\n", d);
-
-	d = printf("Unsigned: %u, Hex (lower): %x, Hex: %X\n", 255, 255, 255);
+    d = printf("Hex (lower): %x\n", 76383937);
 	printf("%d\n", d);
-
-	d = printf("PRINTF: Percent sign: %%\n");
+    d = printf("Hex (upper): %X\n", 76383937);
 	printf("%d\n", d);
-}*/
+	d = printf("Percent sign: %%\n");
+	printf("%d\n", d);
+	
+}
