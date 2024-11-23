@@ -44,7 +44,7 @@ int	ft_printf(const char *format, ...)
 
 	va_start (args, format);
 	count = 0;
-	if (!format || format[count] == '\0')
+	if (!format)
 		return (0);
 	i = 0;
 	while (format[i] != '\0')
@@ -62,7 +62,7 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-#include<stdio.h>
+/* #include<stdio.h>
 int	main(void)
 {
 	int		d;
@@ -112,4 +112,4 @@ int	main(void)
 	d = printf("Percent sign: %%\n");
 	printf("%d\n", d);
 	
-}
+} */
